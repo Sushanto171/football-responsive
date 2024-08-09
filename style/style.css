@@ -226,12 +226,8 @@ footer a{
         padding: 30px 30px;
      }
 }
-@media screen and (min-width:993px) and (max-width:1440){
-#none{
+@media screen and (min-width:993px) {
+    #none{
         display: none;
     }
-    #contents{
-        grid-template-columns: repeat(2,1fr);
-        padding: 40px 30px;
-     }
 }
