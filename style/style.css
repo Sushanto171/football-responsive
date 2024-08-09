@@ -36,7 +36,7 @@
   }
   /* Nav style */
   nav{
-    padding: 20px 156px;
+    padding: 20px 130px;
   }
   nav ul{
     gap: 25px;
@@ -46,13 +46,32 @@
     font-weight: 700;
     font-size: 1.25em;
   }
+  nav ul li a{
+    padding: 10px;
+    border-radius: 8px;
+  }
   nav ul li a:hover{
     text-decoration: underline;
+    background-color: rgba(107, 101, 103, 0.297);
+
   }
   .login-btn{
     padding: 0px 15px ;
     padding-left: 0;
   }
+  nav div a{
+    width: 50px ;
+    height: 50px; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+nav div a:hover{
+    background-color: rgba(107, 101, 103, 0.297);
+    transition: 0.5s;
+}
 /* banner section */
 #banner{
     padding: 20px 156px;
@@ -148,6 +167,9 @@ footer div:nth-child(2) img{
 footer div:nth-child(3){
     padding-top: 15px ;
 }
+footer a{
+    text-decoration: none;
+}
 /* media query */
 @media screen and (max-width:576px) {
     #banner, #highlight{
@@ -178,14 +200,30 @@ footer div:nth-child(3){
         padding: 30px 30px;
      }
 }
-
-@media screen and (min-width:577px) and (max-width:992){
-#none{
+@media screen and (min-width:577px) and (max-width:992px) {
+    nav ul li{
         display: none;
     }
     #contents{
         grid-template-columns: repeat(2,1fr);
         padding: 40px 30px;
+     }
+     #banner, #highlight{
+        flex-direction: column;
+    }
+    #banner{
+        padding: 20px 30px;
+    }
+    #banner-image{
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav{
+        padding: 10px 30px;
+        gap: 5px;
+    }
+    #highlight{
+        padding: 30px 30px;
      }
 }
 @media screen and (min-width:993px) and (max-width:1440){
@@ -196,9 +234,4 @@ footer div:nth-child(3){
         grid-template-columns: repeat(2,1fr);
         padding: 40px 30px;
      }
-}
-@media screen and (min-width:577px) {
-    #none{
-        display: none;
-    }
 }
