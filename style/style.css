@@ -22,7 +22,9 @@
     border-radius: 3px;
     font-weight: 600;
   }
-  
+  main{
+    background-color: #f5f5f5;
+  }
   /* header related style */
   header{
     color: #fff;
@@ -74,9 +76,81 @@
     transition: .05s;
     box-shadow: 0 3px 10px #302e2e;
 }
+/* content section */
+#contents{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 40px 156px;
+}
+.content {
+    margin: 15px;
+    background-color: #fff;
+    padding: 15px;
+    padding-bottom: 25px;
+    border-radius: 5px;
+}
+.content img{
+    max-width: 100%;
+}
+.content h3{
+    font-size: 1.75em;
+    font-weight: 800;
+    margin: 15px 0;
+}
+.content p{
+    color:rgba(108, 108, 108, 1) ;
+    line-height: 26px;
+    margin: 15px 0;
+}
+.content:hover{
+    box-shadow: 0px 10px 10px #302e2e2b;
+}
+/* Highlight section */
+#highlight{
+    padding: 40px 156px;
+
+}
+#highlight-title a{
+    text-decoration: none;
+    color: #fff;
+    width: max-content;
+    margin: 20px 0;
+}
+#highlight-title a:hover{
+    transform: translate(3px);
+    transition: .05s;
+    box-shadow: 0 3px 10px #302e2e4c;
+}
+#highlight-title h3{
+    font-size: 3em;
+    font-weight: 800;
+}
+#highlight-title p{
+    color:rgba(108, 108, 108, 1) ;
+}
+#highlight img{
+    max-width: 100%;
+    border-radius: 5px;
+}
+/* footer section */
+footer{
+    text-align: center;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+footer img{
+    max-width: 100%;
+}
+footer div:nth-child(2) img{
+    width: 50px;
+    height: 50px;
+}
+footer div:nth-child(3){
+    padding-top: 15px ;
+}
 /* media query */
 @media screen and (max-width:576px) {
-    #banner{
+    #banner, #highlight{
         flex-direction: column;
     }
     #banner{
@@ -96,9 +170,35 @@
         width: max-content;
          margin: 19px auto;
      }
+     #contents{
+        grid-template-columns: repeat(1,1fr);
+        padding: 40px 50px;
+     }
+     #highlight{
+        padding: 30px 30px;
+     }
 }
-@media screen and (min-width:577px){
-    nav ul div{
+
+@media screen and (min-width:577px) and (max-width:992){
+#none{
+        display: none;
+    }
+    #contents{
+        grid-template-columns: repeat(2,1fr);
+        padding: 40px 30px;
+     }
+}
+@media screen and (min-width:993px) and (max-width:1440){
+#none{
+        display: none;
+    }
+    #contents{
+        grid-template-columns: repeat(2,1fr);
+        padding: 40px 30px;
+     }
+}
+@media screen and (min-width:577px) {
+    #none{
         display: none;
     }
 }
