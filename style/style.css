@@ -1,0 +1,104 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  /* shared style */
+  *{
+    margin: 0;
+    padding: 0 ;
+  }
+  .display-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .primary-btn{
+    background-color:rgba(224, 44, 109, 1) ;
+    padding: 5px 10px;
+    border: 0;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+  
+  /* header related style */
+  header{
+    color: #fff;
+    background-color: rgba(45, 37, 160, 1);
+  }
+  header a{
+    text-decoration: none;
+    color:#fff;
+  }
+  /* Nav style */
+  nav{
+    padding: 20px 156px;
+  }
+  nav ul{
+    gap: 25px;
+  }
+  nav ul li{
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+  nav ul li a:hover{
+    text-decoration: underline;
+  }
+  .login-btn{
+    padding: 0px 15px ;
+    padding-left: 0;
+  }
+/* banner section */
+#banner{
+    padding: 20px 156px;
+}
+#banner-image{
+    width:60% ;
+}
+#banner-image img{
+    max-width: 100%;
+}
+#banner-title h1{
+    font-size: 4em;
+    font-weight: 700;
+}
+#banner-title a{
+   width: max-content;
+    margin: 19px 0;
+}
+ #banner-title a:hover{
+    transform: translate(3px);
+    transition: .05s;
+    box-shadow: 0 3px 10px #302e2e;
+}
+/* media query */
+@media screen and (max-width:576px) {
+    #banner{
+        flex-direction: column;
+    }
+    #banner{
+        padding: 20px 30px;
+    }
+    #banner-image{
+        width: 100%;
+        margin-top: 20px;
+    }
+    nav ul li{
+        display: none;
+    }
+    nav{
+        padding: 10px 30px;
+    }
+    #banner-title a{
+        width: max-content;
+         margin: 19px auto;
+     }
+}
+@media screen and (min-width:577px){
+    nav ul div{
+        display: none;
+    }
+}
